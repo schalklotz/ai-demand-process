@@ -1,0 +1,38 @@
+/* FutureIdeasView.css - View-specific styles */
+
+/* The root class can be used for specific layout adjustments if needed,
+   but most base styling should come from App.css */
+.future-ideas-view {
+  /* margin: 20px; */ /* Handled by .App padding in App.css */
+  /* font-family: Arial, sans-serif; */ /* Handled by body style in App.css */
+}
+
+/* Specific styling for input fields within the table cells of FutureIdeasView */
+/* This overrides the global form input styling for a more compact table layout */
+.future-ideas-view td input[type="text"],
+.future-ideas-view td input[type="number"],
+.future-ideas-view td input[type="url"], /* Ensure URL input type is covered */
+.future-ideas-view td select {
+  width: calc(100% - 10px); /* Adjust width to fit padding within td, considering td padding */
+  padding: 6px; /* Reduced padding for table inputs */
+  font-size: 0.9em; /* Slightly smaller font for table inputs to fit better */
+  margin-bottom: 0; /* Remove bottom margin for inputs within table cells */
+  /* Other properties like border, border-radius are inherited from App.css */
+}
+
+/* Any other styles that are TRULY specific to FutureIdeasView
+   and cannot be generalized would go here. For example:
+   - Complex layout adjustments unique to this view.
+   - Styling for a unique element that doesn't appear elsewhere.
+*/
+
+/* Styles for h2, table, th, td, buttons, .csv-export-button, etc.,
+   are now expected to be handled by App.css.
+   If a specific override is needed for any of those in this view,
+   it can be added, but prefer global styles for consistency.
+*/
+/* Example of a specific override if needed (though current App.css is likely sufficient):
+.future-ideas-view table {
+  margin-top: 25px; // Slightly different margin than global
+}
+*/

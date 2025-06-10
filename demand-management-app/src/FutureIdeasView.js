@@ -159,7 +159,7 @@ function FutureIdeasView() {
 
   const renderAddIdeaForm = () => (
     // Using future-ideas-view td input styles from App.css for specific input sizing in table
-    <tr className="inline-form-area"> 
+    <tr className="inline-form-area">
       <td><input type="text" name="projectName" placeholder="Project Name" value={formData.projectName} onChange={handleInputChange} /></td>
       <td><input type="text" name="problem" placeholder="Problem" value={formData.problem} onChange={handleInputChange} /></td>
       <td><input type="text" name="solution" placeholder="Solution" value={formData.solution} onChange={handleInputChange} /></td>
@@ -193,13 +193,13 @@ function FutureIdeasView() {
     const { name, value } = e.target;
     setFormData(prev => ({ ...prev, [name]: value === '' ? '' : parseFloat(value) }));
   };
-  
+
   // Generic input change handler
   const handleInputChange = (e) => {
     const { name, value } = e.target;
     setFormData(prev => ({ ...prev, [name]: value }));
   };
-  
+
   const requestSort = (key) => {
     let direction = 'ascending';
     if (sortConfig.key === key && sortConfig.direction === 'ascending') {
@@ -281,7 +281,7 @@ function FutureIdeasView() {
       >
         Export to CSV
       </CSVLink>
-      
+
       <table>
         <thead>
           <tr>
